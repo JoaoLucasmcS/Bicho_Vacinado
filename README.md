@@ -4,9 +4,8 @@
 - João Marcolino  
 - Cauã Jordão  
 - Messias Daniel  
-- Gabriel Moraes  
+- Isabela Karla
 - Victor Barbosa  
-- Leonardo Ibiapina  
 
 ## 📖 Descrição  
 Este repositório contém o projeto desenvolvido na disciplina de **Programação Orientada a Objetos (POO)** do 3º período. O objetivo do projeto será definido ao longo do desenvolvimento, aplicando conceitos fundamentais da POO, como **classes, herança, polimorfismo e encapsulamento**.  
