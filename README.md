@@ -1,7 +1,11 @@
 # 🐾 AmigoPet  
 
 ## 👥 Equipe  
-- *(João Marcolino, Cauã Jordão, Victor Barbosa, Isabela Karla e Messias Daniel)*  
+- João Marcolino
+- Cauã Jordão
+- Victor Barbosa
+- Isabela Karla
+- Messias Daniel
 
 ## 📖 Descrição  
 O AmigoPet é um aplicativo inovador para pet shops, desenvolvido para tornar a experiência de atendimento mais eficiente e transparente. Com ele, os estabelecimentos podem registrar a entrada dos pets, armazenar seus dados e monitorar os serviços prestados, como banho, tosa e consultas veterinárias.
