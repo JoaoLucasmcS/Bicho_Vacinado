@@ -1,31 +1,27 @@
-# 📌 Projeto de Programação Orientada a Objetos (POO)  
+# 🐾 AmigoPet  
 
-## 👥 Integrantes  
-- João Marcolino  
-- Cauã Jordão  
-- Messias Daniel  
-- Isabela Karla
-- Victor Barbosa  
+## 👥 Equipe  
+- *(João Marcolino, Cauã Jordão, Victor Barbosa, Isabela Karla e Messias Daniel)*  
 
 ## 📖 Descrição  
-Este repositório contém o projeto desenvolvido na disciplina de **Programação Orientada a Objetos (POO)** do 3º período. O objetivo do projeto será definido ao longo do desenvolvimento, aplicando conceitos fundamentais da POO, como **classes, herança, polimorfismo e encapsulamento**.  
+O AmigoPet é um aplicativo inovador para pet shops, desenvolvido para tornar a experiência de atendimento mais eficiente e transparente. Com ele, os estabelecimentos podem registrar a entrada dos pets, armazenar seus dados e monitorar os serviços prestados, como banho, tosa e consultas veterinárias.
 
-O repositório será atualizado constantemente com o código-fonte, documentação e demais artefatos relacionados ao projeto.  
+Para os tutores, o AmigoPet oferece uma interface amigável e intuitiva, permitindo acompanhar em tempo real o status dos serviços do seu pet, receber notificações a cada etapa do processo e acessar um histórico completo de atendimentos.
+
+Nosso objetivo é proporcionar mais organização e praticidade para os pet shops, ao mesmo tempo em que garantimos uma experiência segura e tranquila para os tutores e seus amigos de quatro patas.  
+
+O repositório será atualizado constantemente com o código-fonte, documentação e demais artefatos do projeto.  
 
 ## 🚀 Tecnologias Utilizadas  
-- **Linguagem:** *(Adicionar aqui a linguagem que será usada, ex: Java, Python, C#...)*  
-- **Paradigma:** Programação Orientada a Objetos  
-- **Ferramentas:** *(Adicionar aqui caso usem IDE específica, frameworks ou bibliotecas)*  
+- **Linguagem:** *(Java com SpringBoot e React com NextJS)*  
+- **Paradigma:** *(POO)*  
+- **Ferramentas:** *(A definir)*  
 
-## 📂 Entregáveis  
-Aqui serão listados os entregáveis do projeto assim que forem definidos.  
-
-- 🔗 [Link para os entregáveis](#) *(Em breve! 🚧)*  
-
-## 🎯 Objetivos  
-- Desenvolver um projeto aplicando os princípios da Programação Orientada a Objetos.  
-- Aprender e reforçar conceitos fundamentais da POO.  
-- Trabalhar em equipe para a construção de uma solução funcional e bem estruturada.  
+## 📂 Funcionalidades  
+- 📌 Registro dos pets no pet shop  
+- 📌 Acompanhamento em tempo real dos serviços  
+- 📌 Notificações para os tutores  
+- 📌 Histórico de atendimentos  
 
 ## 📌 Como Contribuir  
 1. Faça um **fork** do repositório  
@@ -35,4 +31,4 @@ Aqui serão listados os entregáveis do projeto assim que forem definidos.
 5. Abra um **Pull Request**  
 
 ---  
-🛠️ *Este README será atualizado conforme o projeto evoluir.* 🚀  
+🛠️ *Este README será atualizado conforme o projeto evoluir.* 🚀🐶🐱
