@@ -30,7 +30,7 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 🔗 **Protótipo no Figma:** [Link do Figma](https://www.figma.com/proto/jqWMkpzc2Z5hPzhWVmYQ4m/POO-Lo-Fi?node-id=0-1&t=UcMO1obL8P6DKaS0-1) 
 
 - 📌 Screencast apresentando o protótipo de baixa fidelidade  
-🔗 **Assista no YouTube:** [Link do Vídeo](#) *(substituir pelo link real do vídeo)*  
+🔗 **Assista no YouTube:** [Link do Vídeo](https://www.youtube.com/watch?v=1D8uyGdUdx0) 
 
 ## 📂 Entrega 02 *(09/04)*  
 *(Adicionar detalhes conforme o projeto avançar)*  
