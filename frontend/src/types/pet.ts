@@ -1,4 +1,4 @@
-export type PetIcon = 'cat1' | 'cat2' | 'cat3' | 'cat4' | 'cat5' | 'dog1' | 'dog2' | 'dog3' | 'dog4' | 'dog5';
+import { PetIconName } from '@/utils/petIcons';
 
 export type PetProps = {
   id: number;
@@ -6,5 +6,5 @@ export type PetProps = {
   age: number;
   type: string;
   description: string;
-  icon: PetIcon;
+  icon: PetIconName;
 }

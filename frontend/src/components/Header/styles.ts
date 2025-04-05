@@ -18,7 +18,6 @@ export const Group = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2vw;
 `
 
 export const Logo = styled.img`
@@ -43,6 +42,7 @@ export const Nav = styled.nav`
 `
 
 export const NavItem = styled(NavLink)`
+  width: 3vw;
   ${({ theme }) => css`
     color: ${theme.COLORS.ORANGE};
     font-size: ${theme.FONT_SIZE.MD}px;
@@ -71,4 +71,5 @@ export const LineDivisor = styled.div`
   height: 3vh;
   width: 1px;
   background-color: ${({ theme }) => theme.COLORS.GRAY_400};
+  margin-right: 1vw;
 `

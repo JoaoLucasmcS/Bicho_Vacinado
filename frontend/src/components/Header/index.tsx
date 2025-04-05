@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { Container, Group, Logo, HeaderImage, Nav, NavItem, LineDivisor } from "./styles";
 
@@ -8,13 +8,13 @@ import PersonIcon from "@assets/personIcon.png"
 export const Header = () => {
   return (
     <Container>
-      <NavLink 
+      <Link 
         to="/">
         <Logo
           src={LogoHeader}
           alt="Logo do Bicho Vacinado"
         />
-      </NavLink>
+      </Link>
 
       <Group>
         <Nav>
