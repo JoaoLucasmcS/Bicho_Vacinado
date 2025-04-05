@@ -13,7 +13,7 @@ export const theme = {
 
     ORANGE: "#EE754A",
     BLUE: "#6478B7",
-    BACKGROUND: "EDE8CF",
+    BACKGROUND: "#EDE8CF",
   },
 
   FONT_SIZE:{
@@ -25,7 +25,7 @@ export const theme = {
   },
 
   FONT_FAMILY:{
-    Poppins: "'Poppins', sans-serif",
-    Lilita_One: "'Lilita One', sans-serif",
+    POPPINS: "'Poppins', sans-serif",
+    LILITA_ONE: "'Lilita One', sans-serif",
   },
-}
+} as const;

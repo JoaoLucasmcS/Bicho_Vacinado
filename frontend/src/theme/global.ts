@@ -15,4 +15,8 @@ export const GlobalStyle = createGlobalStyle`
 
     text-decoration: none;
   }
+
+  html, body {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  }
 `;

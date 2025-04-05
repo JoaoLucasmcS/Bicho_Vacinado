@@ -5,6 +5,11 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types",
+      "./src/types"
+    ],
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
@@ -14,7 +19,8 @@
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
       "@services/*": ["src/services/*"],
-      "@theme/*": ["src/theme/*"]
+      "@theme/*": ["src/theme/*"],
+      "@types/*": ["src/types/"],
     },
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

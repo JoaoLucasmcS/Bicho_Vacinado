@@ -1,9 +1,15 @@
+import { Header } from "@/components/Header";
+
+import { Container } from "./styles";
+
 const Pets = () => {
-  return (
-    <div>
-      <h1>Pets</h1>
-    </div>
-  );
+  return (<>
+    <Header />
+    
+    <Container>
+    
+    </Container>
+  </>);
 }
 
 export default Pets;
