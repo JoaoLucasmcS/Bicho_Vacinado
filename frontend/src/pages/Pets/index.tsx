@@ -17,6 +17,24 @@ const Pets = () => {
       type: "Cachorro",
       description: "Um cachorro brincalhão e cheio de energia",
       icon: "dog1",
+    },
+
+    {
+      id: 2,
+      name: "Pingo",
+      age: 1,
+      type: "Cachorro",
+      description: "Um cachorro brincalhão e cheio de energia",
+      icon: "dog2",
+    },
+
+    {
+      id: 3,
+      name: "Mel",
+      age: 1,
+      type: "Gato",
+      description: "Um gato muito Fofo",
+      icon: "cat5",
     }
   ]);
 

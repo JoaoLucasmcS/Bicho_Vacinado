@@ -42,7 +42,9 @@ export const Nav = styled.nav`
 `
 
 export const NavItem = styled(NavLink)`
-  width: 3vw;
+  min-width: 3vw;
+  max-width: 10vw;
+  
   ${({ theme }) => css`
     color: ${theme.COLORS.ORANGE};
     font-size: ${theme.FONT_SIZE.MD}px;

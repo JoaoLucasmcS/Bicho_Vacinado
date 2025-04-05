@@ -24,7 +24,7 @@ export const petIcons = {
   dog5: dogIcon5,
 } as const;
 
-export type PetIconsType = typeof petIcons;
+export type PetIconsType = keyof typeof petIcons;
 
 export const getPetIcon = (iconName: PetIconName): string => {
   return petIcons[iconName];
