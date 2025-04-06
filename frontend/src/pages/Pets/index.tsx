@@ -1,17 +1,15 @@
-import { useState } from "react";
-import { toast } from "react-toastify";
-
 import { Header } from "@/components/Header";
 import { PetCard } from "@/components/PetCard";
-import { ToastRemove } from "@/components/ToastRemove";
+import { AddPetButton } from "@/components/AddPetButton";
 
+import { usePets } from "@/hooks/usePets";
 import { PetProps } from "@/types/pet";
 
 import { Container } from "./styles";
 
+
 const Pets = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [ pets, setPets ] = useState<PetProps[]>([
+  const initialPets = ([
     {
       id: 1,
       name: "Rex",
@@ -37,29 +35,10 @@ const Pets = () => {
       type: "Gato",
       description: "Um gato muito Fofo",
       icon: "cat5",
-    }
-  ]);
+    },
+  ]) as PetProps[];
 
-  const handleRemovePet = (id: number, name: string) => {
-    toast(
-      <ToastRemove
-        onConfirm={() => {
-          setPets(pets.filter(pet => pet.id !== id));
-          toast.dismiss();
-        }}
-        onCancel={() => toast.dismiss()}
-        petName={name}
-      />,
-      {
-        position: "top-center",
-        autoClose: false,
-        closeOnClick: false,
-        draggable: false,
-        closeButton: false,
-        toastId: `delete-pet-${id}`,
-      }
-    );
-  }
+  const { pets, handleRemovePet } = usePets(initialPets);
 
   return (<>
     <Header />
@@ -73,6 +52,8 @@ const Pets = () => {
           onRemove={handleRemovePet}
         />
       ))}
+
+      <AddPetButton />
     </Container>
   </>);
 }
