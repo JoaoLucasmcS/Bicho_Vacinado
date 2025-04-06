@@ -6,7 +6,7 @@ import { ToastRemove } from "@components/ToastRemove";
 
 export const usePets = (initialPets: PetProps[]) => {
   const [ pets, setPets ] = useState<PetProps[]>(initialPets);
-  const [ isOpen, setIsOpen ] = useState(true);
+  const [ isOpen, setIsOpen ] = useState(false);
 
   const handleRemovePet = (id: number, name: string) => {
     toast(

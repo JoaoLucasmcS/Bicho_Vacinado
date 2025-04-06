@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { FormAddPet } from "@/components/FormAddPet"
+
 import {
   Container,
   FormContainer,
@@ -17,6 +19,8 @@ export const AddPetModal = ({ handleOpenAddPet, handleCloseAddPet }: Props) => {
     <Container>
       <FormContainer>
         <FormTitle>Adicionar Pet</FormTitle>
+
+        <FormAddPet />
 
         <ButtonContainer>
           <Button type="PRIMARY" onClick={handleCloseAddPet}>

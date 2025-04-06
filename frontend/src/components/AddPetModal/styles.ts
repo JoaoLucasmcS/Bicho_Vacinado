@@ -20,8 +20,8 @@ export const Container = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 75vw;
-  height: 75vh;
+  width: 60vw;
+  height: 80vh;
 
   display: flex;
   flex-direction: column;
@@ -73,8 +73,8 @@ export const Button = styled.button<ButtonProps>`
 
   &:hover {
     ${({ theme, type }) => css`
-    background-color: ${type === "PRIMARY" ? theme.COLORS.ORANGE : theme.COLORS.BLUE_700};
-    color: ${type === "PRIMARY" ? theme.COLORS.WHITE : theme.COLORS.WHITE};
-  `}
+      background-color: ${type === "PRIMARY" ? theme.COLORS.ORANGE : theme.COLORS.BLUE_700};
+      color: ${type === "PRIMARY" ? theme.COLORS.WHITE : theme.COLORS.WHITE};
+    `}
   }
 `

@@ -55,7 +55,9 @@ const Pets = () => {
         />
       ))}
 
-      <AddPetButton />
+      <AddPetButton 
+        onClick={handleOpenAddPet}
+      />
     </Container>
 
     {isOpen && (
