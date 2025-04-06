@@ -26,5 +26,6 @@ export const IconContainer = styled.button<IconProps>`
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XXL}px;
   }
 `

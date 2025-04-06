@@ -19,9 +19,10 @@ import {
 type Props = {
   type?: 'PRIMARY' | 'SECONDARY';
   pet: PetProps;
+  onRemove: (id: number, name: string) => void;
 }
 
-export const PetCard = ({ type='PRIMARY', pet }: Props) => {
+export const PetCard = ({ type='PRIMARY', pet, onRemove }: Props) => {
   return (
     <Container>
       <CardContainer type={type}>
@@ -36,8 +37,15 @@ export const PetCard = ({ type='PRIMARY', pet }: Props) => {
         </PetInfo>
 
         <IconGroup>
-          <IconButton type="PRIMARY" icon={<FaEdit />}/>
-          <IconButton type="SECONDARY" icon={<FaTrash />}/>
+          <IconButton
+            type="PRIMARY"
+            icon={<FaEdit />}
+          />
+          <IconButton
+            type="SECONDARY" 
+            icon={<FaTrash />}
+            onClick={() => onRemove(pet.id, pet.name)}
+          />
         </IconGroup>
       </CardContainer>
 

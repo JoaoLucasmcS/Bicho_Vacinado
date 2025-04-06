@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 import { Header } from "@/components/Header";
 import { PetCard } from "@/components/PetCard";
+import { ToastRemove } from "@/components/ToastRemove";
 
 import { PetProps } from "@/types/pet";
 
@@ -38,6 +40,27 @@ const Pets = () => {
     }
   ]);
 
+  const handleRemovePet = (id: number, name: string) => {
+    toast(
+      <ToastRemove
+        onConfirm={() => {
+          setPets(pets.filter(pet => pet.id !== id));
+          toast.dismiss();
+        }}
+        onCancel={() => toast.dismiss()}
+        petName={name}
+      />,
+      {
+        position: "top-center",
+        autoClose: false,
+        closeOnClick: false,
+        draggable: false,
+        closeButton: false,
+        toastId: `delete-pet-${id}`,
+      }
+    );
+  }
+
   return (<>
     <Header />
     
@@ -47,6 +70,7 @@ const Pets = () => {
           key={pet.id}
           type={index % 2 === 0 ? 'PRIMARY' : 'SECONDARY'}
           pet={pet}
+          onRemove={handleRemovePet}
         />
       ))}
     </Container>
