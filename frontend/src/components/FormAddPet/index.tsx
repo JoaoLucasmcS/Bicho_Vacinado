@@ -1,21 +1,23 @@
-import { useState } from "react";
-
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import { IconSelector } from "@components/IconSelector";
-
 import { PetIconName } from "@/utils/petIcons";
+
+import { } from "./styles"
 
 type PetType = "Cachorro" | "Gato";
 
 type FormValues = {
-  id: number;
   name: string;
   age: number;
   type: PetType;
   description: string;
   icon: PetIconName;
+}
+
+type Props = {
+  onSubmit: (values: FormValues) => Promise<void>;
 }
 
 const validationSchema = Yup.object().shape({
@@ -36,11 +38,8 @@ const validationSchema = Yup.object().shape({
     .required('Ícone é obrigatório')
 });
 
-export const FormAddPet = ({ onSubmit }: { onSubmit: (values: FormValues) => void }) => {
-  const [nextId, setNextId] = useState(1);
-
+export const FormAddPet = ({ onSubmit }: Props) => {
   const initialValues: FormValues = {
-    id: nextId,
     name: '',
     age: 0,
     type: 'Gato',
@@ -48,28 +47,24 @@ export const FormAddPet = ({ onSubmit }: { onSubmit: (values: FormValues) => voi
     icon: 'cat1',
   };
 
-  const handleSubmit = (values: FormValues, { resetForm }: { resetForm: () => void }) => {
-    onSubmit(values);
-    setNextId(prevId => prevId + 1);
-    resetForm();
+  const handleSubmit = async (values: FormValues) => {
+    try {
+      await onSubmit(values);
+    } catch (error) {
+      console.error("Erro ao adicionar pet:", error);
+    }
   };
 
   return (
     <div className="pet-form">
-      <h2>Adicionar Novo Pet</h2>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
         enableReinitialize={true}
       >
-        {({ values, setFieldValue }) => (
+        {({ values, setFieldValue, isSubmitting }) => (
           <Form>
-            <div className="form-group">
-              <label htmlFor="id">ID:</label>
-              <Field type="text" id="id" name="id" disabled value={nextId} />
-            </div>
-
             <div className="form-group">
               <label htmlFor="name">Nome:</label>
               <Field type="text" id="name" name="name" placeholder="Digite o nome do pet" />
@@ -115,7 +110,7 @@ export const FormAddPet = ({ onSubmit }: { onSubmit: (values: FormValues) => voi
             </div>
 
             <button type="submit" className="submit-button">
-              Enviar
+              {isSubmitting ? "Adicionando..." : "Adicionar Pet"}
             </button>
           </Form>
         )}

@@ -20,7 +20,11 @@ export const AddPetModal = ({ handleOpenAddPet, handleCloseAddPet }: Props) => {
       <FormContainer>
         <FormTitle>Adicionar Pet</FormTitle>
 
-        <FormAddPet />
+        <FormAddPet
+          onSubmit={async (values) => {
+            console.log("Valores do formulário:", values)
+          }}
+        />
 
         <ButtonContainer>
           <Button type="PRIMARY" onClick={handleCloseAddPet}>
