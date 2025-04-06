@@ -6,6 +6,7 @@ import { ToastRemove } from "@components/ToastRemove";
 
 export const usePets = (initialPets: PetProps[]) => {
   const [ pets, setPets ] = useState<PetProps[]>(initialPets);
+  const [ isOpen, setIsOpen ] = useState(true);
 
   const handleRemovePet = (id: number, name: string) => {
     toast(
@@ -28,12 +29,16 @@ export const usePets = (initialPets: PetProps[]) => {
     );
   }
 
-  // const handleOpenAddPet = () => {}
-  // const handleCloseAddPet = () => {}
+  const handleOpenAddPet = () => setIsOpen(true);
+  const handleCloseAddPet = () => setIsOpen(false);
+
   // const handleAddPet = (pet: PetProps) => {}
 
   return {
     pets,
+    isOpen,
     handleRemovePet,
+    handleOpenAddPet,
+    handleCloseAddPet,
   }
 }

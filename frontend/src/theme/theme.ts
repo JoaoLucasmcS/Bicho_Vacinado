@@ -13,6 +13,7 @@ export const theme = {
 
     ORANGE: "#EE754A",
     BLUE: "#6478B7",
+    BLUE_700: "#173AA6",
     RED: "#FF0000",
     BACKGROUND: "#EDE8CF",
   },

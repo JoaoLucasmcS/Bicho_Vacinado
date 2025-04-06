@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Header } from "@/components/Header";
 import { PetCard } from "@/components/PetCard";
 import { AddPetButton } from "@/components/AddPetButton";
+import { AddPetModal } from "@/components/AddPetModal";
 
 import { usePets } from "@/hooks/usePets";
 import { PetProps } from "@/types/pet";
@@ -38,7 +40,7 @@ const Pets = () => {
     },
   ]) as PetProps[];
 
-  const { pets, handleRemovePet } = usePets(initialPets);
+  const { pets, isOpen, handleRemovePet, handleOpenAddPet, handleCloseAddPet } = usePets(initialPets);
 
   return (<>
     <Header />
@@ -55,6 +57,13 @@ const Pets = () => {
 
       <AddPetButton />
     </Container>
+
+    {isOpen && (
+      <AddPetModal 
+        handleOpenAddPet={handleOpenAddPet}
+        handleCloseAddPet={handleCloseAddPet}
+      />
+    )}
   </>);
 }
 
