@@ -63,6 +63,7 @@ public class PetService {
         response.setHistoricoSaude(atualizado.getHistoricoSaude());
         response.setUsuarioId(atualizado.getUsuarioID());
 
+        
         return response;
     }
 }
