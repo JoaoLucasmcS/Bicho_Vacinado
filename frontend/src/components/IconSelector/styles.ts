@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 type IconOptionProps = {
   selected: boolean;
+  type: "PRIMARY" | "SECONDARY"
 }
 
 export const IconGrid = styled.div`
@@ -22,7 +23,11 @@ export const IconOption = styled.div<IconOptionProps>`
   
   border: 2px solid transparent;
   border-radius: 5px;
-  border-color: ${({ selected, theme }) => (selected ? theme.COLORS.ORANGE : 'transparent')};
+  border-color: ${({ selected, theme, type }) => (`${
+    type === "PRIMARY" ?
+    (selected ? theme.COLORS.ORANGE : `transparent`) :
+    (selected ? theme.COLORS.BLUE : `transparent`)}`)
+    };
   
   transition: all 0.2s ease;
   

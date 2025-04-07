@@ -57,7 +57,7 @@ export const ButtonContainer = styled.div`
 
 export const Button = styled.button<ButtonProps>`
   width: 10vh;
-  height: 5vh;
+  height: 4vh;
 
   border-radius: 20px;
   cursor: pointer;

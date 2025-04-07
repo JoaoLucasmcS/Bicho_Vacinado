@@ -8,3 +8,5 @@ export type PetProps = {
   description: string;
   icon: PetIconName;
 }
+
+export type PetType = "Cachorro" | "Gato";

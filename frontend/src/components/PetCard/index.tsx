@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
 
@@ -37,10 +38,12 @@ export const PetCard = ({ type='PRIMARY', pet, onRemove }: Props) => {
         </PetInfo>
 
         <IconGroup>
-          <IconButton
-            type="PRIMARY"
-            icon={<FaEdit />}
-          />
+          <Link to={`/petedit/${pet.id}`}>
+            <IconButton
+              type="PRIMARY"
+              icon={<FaEdit />}
+            />
+          </Link>
           <IconButton
             type="SECONDARY" 
             icon={<FaTrash />}

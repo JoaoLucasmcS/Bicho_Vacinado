@@ -10,11 +10,10 @@ import {
 } from "./styles"
 
 type Props = {
-  handleOpenAddPet: () => void;
   handleCloseAddPet: () => void;
 }
 
-export const AddPetModal = ({ handleOpenAddPet, handleCloseAddPet }: Props) => {
+export const AddPetModal = ({ handleCloseAddPet }: Props) => {
   return (
     <Container>
       <FormContainer>
@@ -29,9 +28,6 @@ export const AddPetModal = ({ handleOpenAddPet, handleCloseAddPet }: Props) => {
         <ButtonContainer>
           <Button type="PRIMARY" onClick={handleCloseAddPet}>
             Cancelar
-          </Button>
-          <Button type="SECONDARY" onClick={handleCloseAddPet}>
-            Adicionar
           </Button>
         </ButtonContainer>
       </FormContainer>

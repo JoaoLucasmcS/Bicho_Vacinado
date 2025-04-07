@@ -62,7 +62,6 @@ const Pets = () => {
 
     {isOpen && (
       <AddPetModal 
-        handleOpenAddPet={handleOpenAddPet}
         handleCloseAddPet={handleCloseAddPet}
       />
     )}

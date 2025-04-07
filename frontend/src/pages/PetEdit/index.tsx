@@ -1,11 +1,15 @@
+import { useParams } from 'react-router-dom';
+
 import * as Yup from "yup";
 import { Formik } from "formik";
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa6";
 
 import { IconSelector } from "@components/IconSelector";
 import { PetIconName } from "@/utils/petIcons";
-import { PetType } from "@/types/pet";
+import { PetType } from '@/types/pet';
 
-import { FormContainer, FormErrorMessage, FormField, FormLabel, FormButton } from "./styles"
+import { Container, FormButton, FormContainer, FormErrorMessage, FormField, FormLabel, BackButton } from "./styles"
 
 export type FormValues = {
   name: string;
@@ -37,7 +41,12 @@ const validationSchema = Yup.object().shape({
     .required('Ícone é obrigatório')
 });
 
-export const FormAddPet = ({ onSubmit }: Props) => {
+const PetEdit = ({ onSubmit }: Props) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+
+  // TODO Encontrar o pet pelo id e preencher os campos do formulário com os dados do pet
   const initialValues: FormValues = {
     name: '',
     age: null,
@@ -45,7 +54,7 @@ export const FormAddPet = ({ onSubmit }: Props) => {
     description: '',
     icon: 'cat1',
   };
-
+  
   const handleSubmit = async (values: FormValues) => {
     try {
       await onSubmit(values);
@@ -54,8 +63,14 @@ export const FormAddPet = ({ onSubmit }: Props) => {
     }
   };
 
-  return (
-    <div>
+  return (<>
+    <BackButton
+      onClick={() => navigate(-1)}
+    >
+      <FaArrowLeft />
+    </BackButton>
+
+    <Container>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -100,6 +115,7 @@ export const FormAddPet = ({ onSubmit }: Props) => {
             <div className="form-group">
               <FormLabel>Ícone:</FormLabel>
               <IconSelector 
+                type="SECONDARY"
                 selectedIcon={values.icon}
                 onIconSelect={(icon: PetIconName) => {
                   setFieldValue('icon', icon);
@@ -109,11 +125,13 @@ export const FormAddPet = ({ onSubmit }: Props) => {
             </div>
 
             <FormButton type="submit">
-              {isSubmitting ? "Adicionando..." : "Adicionar Pet"}
+              {isSubmitting ? "Editando..." : "Editar Informações"}
             </FormButton>
           </FormContainer>
         )}
       </Formik>
-    </div>
-  )
+    </Container>
+  </>);
 }
+
+export default PetEdit;

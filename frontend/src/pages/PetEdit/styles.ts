@@ -1,8 +1,47 @@
 import styled, { css } from "styled-components";
 import { Form, Field, ErrorMessage } from "formik";
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+`
+
+export const BackButton = styled.button`
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+
+  background-color: ${({ theme }) => theme.COLORS.BLUE};
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  font-size: ${({ theme }) => theme.FONT_SIZE.XXL}px;
+  color: ${({ theme }) => theme.COLORS.WHITE};
+
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.COLORS.BLUE_700};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+
+    box-shadow: 0 0 5px ${({ theme }) => theme.COLORS.BLUE_700};
+  }
+`
+
 export const FormContainer = styled(Form)`
   display: flex;
+  justify-content: center;
   flex-direction: column;
 
   gap: 1vh;
@@ -28,10 +67,10 @@ export const FormField = styled(Field)`
 
   border-radius: 0 15px 15px 0;
   padding: 3px;
-  border: 1px solid ${({ theme }) => theme.COLORS.ORANGE};
+  border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
 
-  resize: none;
   transition: 0.2s ease-in-out;
+  resize: none;
 
   ${({ theme }) => css`
     color: ${theme.COLORS.GRAY_700};
@@ -48,9 +87,9 @@ export const FormField = styled(Field)`
   }
 
   &:focus {
-    border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
+    border: 1px solid ${({ theme }) => theme.COLORS.ORANGE};
     outline: none;
-    box-shadow: 0 0 2px ${({ theme }) => theme.COLORS.BLUE};
+    box-shadow: 0 0 2px ${({ theme }) => theme.COLORS.ORANGE};
   }
 `
 
@@ -68,7 +107,7 @@ export const FormButton = styled.button`
   border-radius: 20px;
   cursor: pointer;
 
-  background-color: ${({ theme }) => theme.COLORS.ORANGE};
+  background-color: ${({ theme }) => theme.COLORS.BLUE};
   color: ${({ theme }) => theme.COLORS.WHITE};
   border: none;
 
@@ -77,7 +116,7 @@ export const FormButton = styled.button`
   transition: 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${({ theme }) => theme.COLORS.BLUE};
+    background-color: ${({ theme }) => theme.COLORS.ORANGE};
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 `

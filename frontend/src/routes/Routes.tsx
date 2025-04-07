@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from '@pages/Home';
 import Pets from '@/pages/Pets';
-import PetInfo from '@/pages/PetInfo';
+import PetEdit from '@/pages/PetEdit';
 
 const AppRoutes = () => {
   return (
@@ -18,8 +18,8 @@ const AppRoutes = () => {
       />
 
       <Route
-        path="/pets/:id"
-        element={<PetInfo />}
+        path="/petedit/:id"
+        element={<PetEdit />}
       />
     </Routes>
   )
