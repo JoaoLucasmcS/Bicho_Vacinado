@@ -1,16 +1,16 @@
 import * as Yup from "yup";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik } from "formik";
 
 import { IconSelector } from "@components/IconSelector";
 import { PetIconName } from "@/utils/petIcons";
 
-import { } from "./styles"
+import { FormContainer, FormErrorMessage, FormField, FormLabel, FormButton } from "./styles"
 
 type PetType = "Cachorro" | "Gato";
 
-type FormValues = {
+export type FormValues = {
   name: string;
-  age: number;
+  age: number | null;
   type: PetType;
   description: string;
   icon: PetIconName;
@@ -41,7 +41,7 @@ const validationSchema = Yup.object().shape({
 export const FormAddPet = ({ onSubmit }: Props) => {
   const initialValues: FormValues = {
     name: '',
-    age: 0,
+    age: null,
     type: 'Gato',
     description: '',
     icon: 'cat1',
@@ -64,55 +64,55 @@ export const FormAddPet = ({ onSubmit }: Props) => {
         enableReinitialize={true}
       >
         {({ values, setFieldValue, isSubmitting }) => (
-          <Form>
+          <FormContainer>
             <div className="form-group">
-              <label htmlFor="name">Nome:</label>
-              <Field type="text" id="name" name="name" placeholder="Digite o nome do pet" />
-              <ErrorMessage name="name" component="div" className="error-message" />
+              <FormLabel htmlFor="name">Nome:</FormLabel>
+              <FormField type="text" id="name" name="name" placeholder="Informe o nome do seu pet" />
+              <FormErrorMessage name="name" component="div" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="age">Idade:</label>
-              <Field type="number" id="age" name="age" min="0" max="50" />
-              <ErrorMessage name="age" component="div" className="error-message" />
+              <FormLabel htmlFor="age">Idade:</FormLabel>
+              <FormField type="number" id="age" name="age" min="0" max="50" />
+              <FormErrorMessage name="age" component="div" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="type">Tipo:</label>
-              <Field as="select" id="type" name="type">
+              <FormLabel htmlFor="type">Tipo:</FormLabel>
+              <FormField as="select" id="type" name="type">
                 <option value="Gato">Gato</option>
                 <option value="Cachorro">Cachorro</option>
-              </Field>
-              <ErrorMessage name="type" component="div" className="error-message" />
+              </FormField>
+              <FormErrorMessage name="type" component="div" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="description">Descrição (opcional):</label>
-              <Field 
+              <FormLabel htmlFor="description">Descrição (opcional):</FormLabel>
+              <FormField 
                 as="textarea" 
                 id="description" 
                 name="description" 
                 rows={3} 
                 placeholder="Descreva características do pet" 
               />
-              <ErrorMessage name="description" component="div" className="error-message" />
+              <FormErrorMessage name="description" component="div" />
             </div>
 
             <div className="form-group">
-              <label>Ícone:</label>
+              <FormLabel>Ícone:</FormLabel>
               <IconSelector 
                 selectedIcon={values.icon}
                 onIconSelect={(icon: PetIconName) => {
                   setFieldValue('icon', icon);
                 }}
               />
-              <ErrorMessage name="icon" component="div" className="error-message" />
+              <FormErrorMessage name="icon" component="div" />
             </div>
 
-            <button type="submit" className="submit-button">
+            <FormButton type="submit">
               {isSubmitting ? "Adicionando..." : "Adicionar Pet"}
-            </button>
-          </Form>
+            </FormButton>
+          </FormContainer>
         )}
       </Formik>
     </div>

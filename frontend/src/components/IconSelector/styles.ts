@@ -17,17 +17,17 @@ export const IconOption = styled.div<IconOptionProps>`
   align-items: center;
   
   padding: 5px;
-  background-color: ${({ selected }) => (selected ? '#f0f0f0' : 'transparent')};
+  background-color: ${({ selected, theme }) => (selected ? theme.COLORS.WHITE : 'transparent')};
   cursor: pointer;
   
   border: 2px solid transparent;
   border-radius: 5px;
-  border-color: ${({ selected }) => (selected ? '#4CAF50' : 'transparent')};
+  border-color: ${({ selected, theme }) => (selected ? theme.COLORS.ORANGE : 'transparent')};
   
   transition: all 0.2s ease;
   
   &:hover {
-    background-color: #f5f5f5;
+    background-color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 `;
 

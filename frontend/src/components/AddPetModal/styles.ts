@@ -20,8 +20,9 @@ export const Container = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 60vw;
-  height: 80vh;
+  min-width: 60vw;
+  max-width: 95vw;
+  height: 90vh;
 
   display: flex;
   flex-direction: column;
