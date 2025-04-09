@@ -33,7 +33,12 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 🔗 **Assista no YouTube:** [Link do Vídeo](https://www.youtube.com/watch?v=1D8uyGdUdx0) 
 
 ## 📂 Entrega 02 *(09/04)*  
-*(Adicionar detalhes conforme o projeto avançar)*  
+- ✅ Implementação de 2 histórias de usuário (interface gráfica e persistência em memória realizadas)  
+- ✅ Ambiente de versionamento atuante com commits frequentes na branch principal  
+- ✅ Diagrama de classes do sistema completo  
+  🔗 [Visualizar Diagrama no Lucidchart](https://lucid.app/lucidchart/889b306a-aede-4a46-a660-44928fc30e3f/edit?invitationId=inv_3f46c58c-5c24-4b2c-8318-6334d3503e70&page=0_0#)  
+- ✅ Issue/bug tracker não utilizado. O acompanhamento de tarefas e bugs está sendo feito via Trello  
+- 🔄 Screencast em edição – será publicado em breve no YouTube  
 
 ## 📂 Entrega 03 *(29/04)*  
 *(Adicionar detalhes conforme o projeto avançar)*  
@@ -42,8 +47,8 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 *(Adicionar detalhes conforme o projeto avançar)*  
 
 ## 🚀 Tecnologias Utilizadas  
-- **Linguagem:** *(Java com SpringBoot e React com NextJS)*  
-- **Paradigma:** *(POO)*  
+- **Linguagem:** Java com SpringBoot e React com NextJS  
+- **Paradigma:** POO  
 - **Ferramentas:** *(A definir)*  
 
 ## 📂 Funcionalidades  
