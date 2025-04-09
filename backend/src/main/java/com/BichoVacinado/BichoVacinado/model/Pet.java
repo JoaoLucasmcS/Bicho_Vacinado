@@ -13,6 +13,7 @@ import lombok.Getter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pet {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

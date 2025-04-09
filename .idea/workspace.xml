@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc8839f-3270-4bbc-9b9b-d0c47bf0975f" name="Changes" comment="" />
+    <list default="true" id="3fc8839f-3270-4bbc-9b9b-d0c47bf0975f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/model/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddPetButton/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AddPetButton/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddPetModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AddPetModal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddPetModal/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AddPetModal/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FormAddPet/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FormAddPet/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FormAddPet/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FormAddPet/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/IconSelector/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/IconSelector/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/usePets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/usePets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Pets/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Pets/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/theme/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/petIcons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/petIcons.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,39 +33,56 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "JoaoLucasmcS"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JoaoLucasmcS&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JoaoLucasmcS/Bicho_Vacinado.git",
-    "accountId": "2c8f19dd-1ada-46ef-ab5a-0e70fc0d95ee"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JoaoLucasmcS/Bicho_Vacinado.git&quot;,
+    &quot;accountId&quot;: &quot;2c8f19dd-1ada-46ef-ab5a-0e70fc0d95ee&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2vKwlDdFwV3YhYDjZfIfydJdRUJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BichoVacinadoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/joaol/AppData/Roaming/JetBrains/IntelliJIdea2024.2/node/versions/22.14.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\JetBrains\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BichoVacinadoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="BichoVacinado" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.BichoVacinado.BichoVacinado.BichoVacinadoApplication" />
       <method v="2">
@@ -70,10 +107,19 @@
       <option name="presentableId" value="Default" />
       <updated>1743907224100</updated>
       <workItem from="1743907225604" duration="49000" />
+      <workItem from="1744065278750" duration="556000" />
+      <workItem from="1744065894468" duration="639000" />
+      <workItem from="1744066544096" duration="625000" />
+      <workItem from="1744232023848" duration="1765000" />
+      <workItem from="1744234096868" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

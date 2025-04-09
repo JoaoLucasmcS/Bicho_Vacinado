@@ -10,9 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class PetService {
 
+    @Autowired
     private PetRepository petRepository;
 
     public PetResponse cadastrar(PetRequest petRequest){
+
         Pet pet = new Pet();
 
         pet.setNome(petRequest.getNome());
