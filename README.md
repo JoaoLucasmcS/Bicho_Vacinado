@@ -21,9 +21,9 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 # 📌 Entregas do Projeto  
 
 ## 📂 Entrega 01 - Definição e Protótipo Lo-Fi *(22/03)*  
-- 📌 Histórias do usuário bem definidas (mínimo 7), claras e concisas  
-- 📌 Cenários de validação para cada história  
-- 📌 Documento com as histórias disponível no GitHub  
+- ✅ Histórias do usuário bem definidas (mínimo 7), claras e concisas  
+- ✅ Cenários de validação para cada história  
+- ✅ Documento com as histórias disponível no GitHub  
 🔗 **Histórias do Usuário:** [Trello - Bicho Vacinado](https://trello.com/invite/b/67da3195582172c1698f289b/ATTIb02e4d05b83676a58954d09bb422a22551608170/projeto-poo)  
 
 - 📌 Criação do protótipo de baixa fidelidade (Lo-Fi) no Figma  
