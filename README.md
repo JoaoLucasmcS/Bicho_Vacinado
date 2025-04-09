@@ -26,10 +26,10 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 - ✅ Documento com as histórias disponível no GitHub  
 🔗 **Histórias do Usuário:** [Trello - Bicho Vacinado](https://trello.com/invite/b/67da3195582172c1698f289b/ATTIb02e4d05b83676a58954d09bb422a22551608170/projeto-poo)  
 
-- 📌 Criação do protótipo de baixa fidelidade (Lo-Fi) no Figma  
+- ✅ Criação do protótipo de baixa fidelidade (Lo-Fi) no Figma  
 🔗 **Protótipo no Figma:** [Link do Figma](https://www.figma.com/proto/jqWMkpzc2Z5hPzhWVmYQ4m/POO-Lo-Fi?node-id=0-1&t=UcMO1obL8P6DKaS0-1) 
 
-- 📌 Screencast apresentando o protótipo de baixa fidelidade  
+- ✅ Screencast apresentando o protótipo de baixa fidelidade  
 🔗 **Assista no YouTube:** [Link do Vídeo](https://www.youtube.com/watch?v=1D8uyGdUdx0) 
 
 ## 📂 Entrega 02 *(09/04)*  
