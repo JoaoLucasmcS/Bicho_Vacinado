@@ -39,7 +39,8 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
   🔗 [Visualizar Diagrama no Lucidchart](https://lucid.app/lucidchart/889b306a-aede-4a46-a660-44928fc30e3f/edit?invitationId=inv_3f46c58c-5c24-4b2c-8318-6334d3503e70&page=0_0#)  
 - ✅ Issue/bug tracker não utilizado. O acompanhamento de tarefas e bugs está sendo feito via Trello  
 
-- ✅ Screencast do uso do sistema                                                                              🔗 **Assista no YouTube:** [Link do Vídeo](https://youtu.be/8RQKifDTwF8?si=0uAZ33eIy8Ebui08) 
+- ✅ Screencast do uso do sistema
+🔗 **Assista no YouTube:** [Link do Vídeo](https://youtu.be/8RQKifDTwF8?si=0uAZ33eIy8Ebui08) 
 
 ## 📂 Entrega 03 *(29/04)*  
 *(Adicionar detalhes conforme o projeto avançar)*  
