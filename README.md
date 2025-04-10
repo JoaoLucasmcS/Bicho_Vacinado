@@ -40,7 +40,7 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 - ✅ Issue/bug tracker não utilizado. O acompanhamento de tarefas e bugs está sendo feito via Trello  
 
 - ✅ Screencast do uso do sistema
-  🔗 **Assista no YouTube:** [Link do Vídeo](https://youtu.be/8RQKifDTwF8?si=0uAZ33eIy8Ebui08) 
+🔗 **Assista no YouTube:** [Link do Vídeo](https://youtu.be/8RQKifDTwF8?si=0uAZ33eIy8Ebui08) 
 
 ## 📂 Entrega 03 *(29/04)*  
 *(Adicionar detalhes conforme o projeto avançar)*  
