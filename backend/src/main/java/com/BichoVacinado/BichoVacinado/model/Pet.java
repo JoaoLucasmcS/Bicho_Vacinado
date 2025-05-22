@@ -29,6 +29,9 @@ public class Pet {
     private Double peso;
     private String historicoSaude;
 
+    @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private CartaoDeVacina cartaoDeVacina;
+    
     @Column(name = "usuario_id", nullable = false)
     private Long usuarioId;
 }

@@ -1,12 +1,12 @@
 package com.BichoVacinado.BichoVacinado.controller;
 
 import com.BichoVacinado.BichoVacinado.dto.request.PetRequest;
-import com.BichoVacinado.BichoVacinado.dto.request.PetRequest;
+//import com.BichoVacinado.BichoVacinado.dto.request.PetRequest;
 import com.BichoVacinado.BichoVacinado.dto.response.PetResponse;
 import com.BichoVacinado.BichoVacinado.service.PetService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+//import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
