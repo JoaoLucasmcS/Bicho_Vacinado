@@ -46,7 +46,7 @@ O repositório será atualizado constantemente com o código-fonte, documentaç�
 *(Adicionar detalhes conforme o projeto avançar)*  
 
 ## 📂 Entrega 04 *(30/05)*  
-- ✅ Diagrama de classes completo  
+- ✅ Diagrama de Classes completo  
   🔗 [Visualizar Diagrama no Lucidchart](https://lucid.app/lucidchart/77860d1a-37d2-49e3-90e9-470cc8a315a3/edit?viewport_loc=0%2C25%2C3945%2C2260%2C0_0&invitationId=inv_9f5b80cd-a633-4c1f-96a0-fbf88e25916b)  
 
 ## 🚀 Tecnologias Utilizadas  
