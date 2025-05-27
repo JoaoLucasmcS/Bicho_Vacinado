@@ -24,42 +24,53 @@ public class CartaoDeVacinaController {
     }
 
     // Criar cartão de vacinação para um pet
-    @PostMapping("/pet/{petId}")
-    public ResponseEntity<?> criarCartao(@PathVariable Long petId, @RequestBody CartaoDeVacina cartao) {
-        Optional<Pet> petOptional = petRepo.findById(petId);
-        if (petOptional.isEmpty()) {
-            return ResponseEntity.badRequest().body("Pet não encontrado.");
-        }
-
-        if (cartaoRepo.findByPetId(petId) != null) {
-            return ResponseEntity.badRequest().body("Este pet já possui um cartão de vacinação.");
-        }
-
-        Pet pet = petOptional.get();
-        cartao.setPet(pet);
-
-        cartaoRepo.save(cartao);
-        return ResponseEntity.ok("Cartão de vacinação criado com sucesso.");
+   @PostMapping("/pet/{petId}")
+public ResponseEntity<?> criarCartao(@PathVariable Long petId, 
+                                     @Valid @RequestBody CartaoDeVacina cartao, 
+                                     BindingResult result) {
+    if (result.hasErrors()) {
+        return ResponseEntity.badRequest().body(result.getAllErrors());
     }
 
-    // Atualizar cartão de vacinação por ID do cartão
-    @PutMapping("/{cartaoId}")
-    public ResponseEntity<?> atualizarCartao(
-            @PathVariable Long cartaoId,
-            @RequestBody CartaoDeVacina cartaoAtualizado) {
+    Optional<Pet> optionalPet = petRepo.findById(petId);
+    if (optionalPet.isEmpty()) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pet não encontrado");
+    }
 
-        Optional<CartaoDeVacina> cartaoOptional = cartaoRepo.findById(cartaoId);
-        if (cartaoOptional.isEmpty()) {
-            return ResponseEntity.notFound().build();
+    Pet pet = optionalPet.get();
+
+    if (cartaoRepo.findByPetId(pet.getId()).isPresent()) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("Já existe um cartão para este pet.");
+    }
+
+    cartao.setPet(pet);
+    cartaoRepo.save(cartao);
+
+    return ResponseEntity.status(HttpStatus.CREATED).body(cartao);
+}
+
+
+    // Atualizar cartão de vacinação por ID do cartão
+   @PutMapping("/{id}")
+    public ResponseEntity<?> atualizarCartao(@PathVariable Long id, 
+                                            @Valid @RequestBody CartaoDeVacina cartaoAtualizado, 
+                                            BindingResult result) {
+        if (result.hasErrors()) {
+            return ResponseEntity.badRequest().body(result.getAllErrors());
         }
 
-        CartaoDeVacina cartaoExistente = cartaoOptional.get();
+        Optional<CartaoDeVacina> optionalCartao = cartaoRepo.findById(id);
+        if (optionalCartao.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cartão não encontrado");
+        }
 
-        cartaoExistente.setNome(cartaoAtualizado.getNome());
-        // Atualize outros campos conforme necessário
+        CartaoDeVacina cartao = optionalCartao.get();
+        cartao.setNome(cartaoAtualizado.getNome());
+        // ⚠️ Não deve permitir alterar: pet ou vacinas diretamente!
 
-        cartaoRepo.save(cartaoExistente);
-        return ResponseEntity.ok("Cartão de vacinação atualizado com sucesso.");
+        cartaoRepo.save(cartao);
+
+        return ResponseEntity.ok(cartao);
     }
 
     // Consultar cartão pelo petId

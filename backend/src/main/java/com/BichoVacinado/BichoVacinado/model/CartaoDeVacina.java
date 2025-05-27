@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.Getter;
+import jakarta.validation.constraints.NotBlank;
+
 
 import java.util.List;
 
@@ -21,6 +23,7 @@ public class CartaoDeVacina {
     private Long id;
 
     @Column(nullable = false)
+    @NotBlank(message = "O nome é obrigatório")
     private String nome;
     
     @OneToOne
