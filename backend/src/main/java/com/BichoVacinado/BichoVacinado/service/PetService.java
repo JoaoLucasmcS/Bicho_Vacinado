@@ -4,68 +4,64 @@ import com.BichoVacinado.BichoVacinado.dto.response.PetResponse;
 import com.BichoVacinado.BichoVacinado.dto.request.PetRequest;
 import com.BichoVacinado.BichoVacinado.model.Pet;
 import com.BichoVacinado.BichoVacinado.repository.PetRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
+@RequiredArgsConstructor
 public class PetService {
 
-    @Autowired
-    private PetRepository petRepository;
+    private final PetRepository petRepository;
 
-    public PetResponse cadastrar(PetRequest petRequest){
-
-        Pet pet = new Pet();
-
-        pet.setNome(petRequest.getNome());
-        pet.setIdade(petRequest.getIdade());
-        pet.setPeso(petRequest.getPeso());
-        pet.setEspecie(petRequest.getEspecie());
-        pet.setRaca(petRequest.getRaca());
-        pet.setHistoricoSaude(petRequest.getHistoricoSaude());
-        pet.setUsuarioId(petRequest.getUsuarioId());
-
-        Pet salvo = petRepository.save(pet);
-
-        PetResponse response = new PetResponse();
-        response.setId(salvo.getId());
-        response.setNome(salvo.getNome());
-        response.setEspecie(salvo.getEspecie());
-        response.setRaca(salvo.getRaca());
-        response.setIdade(salvo.getIdade());
-        response.setPeso(salvo.getPeso());
-        response.setHistoricoSaude(salvo.getHistoricoSaude());
-        response.setUsuarioId(salvo.getUsuarioId());
-
-        return response;
-
+    public PetResponse cadastrar(PetRequest request) {
+        Pet pet = toEntity(request);
+        return toResponse(petRepository.save(pet));
     }
 
-    public PetResponse atualizar(Long id, PetRequest request){
-
-        Pet pet = petRepository.findById(id).orElseThrow(() -> new RuntimeException("Pet não Encontrado"));
+    public PetResponse atualizar(Long id, PetRequest request) {
+        Pet pet = petRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Pet não encontrado"));
 
         pet.setNome(request.getNome());
-        pet.setEspecie(request.getEspecie());
-        pet.setRaca(request.getRaca());
         pet.setIdade(request.getIdade());
         pet.setPeso(request.getPeso());
-        pet.setHistoricoSaude(request.getHistoricoSaude());
-        pet.setUsuarioId(request.getUsuarioId());
 
-        Pet atualizado = petRepository.save(pet);
+        return toResponse(petRepository.save(pet));
+    }
 
-        PetResponse response = new PetResponse();
-        response.setId(atualizado.getId());
-        response.setNome(atualizado.getNome());
-        response.setEspecie(atualizado.getEspecie());
-        response.setRaca(atualizado.getRaca());
-        response.setIdade(atualizado.getIdade());
-        response.setPeso(atualizado.getPeso());
-        response.setHistoricoSaude(atualizado.getHistoricoSaude());
-        response.setUsuarioId(atualizado.getUsuarioId());
+    public PetResponse buscarPorId(Long id) {
+        Pet pet = petRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Pet não encontrado"));
+        return toResponse(pet);
+    }
 
-        
-        return response;
+    public List<PetResponse> listarTodos() {
+        return petRepository.findAll().stream()
+                .map(this::toResponse)
+                .collect(Collectors.toList());
+    }
+
+    private Pet toEntity(PetRequest request) {
+        Pet pet = new Pet();
+        pet.setNome(request.getNome());
+        pet.setIdade(request.getIdade());
+        pet.setPeso(request.getPeso());
+        return pet;
+    }
+
+    private PetResponse toResponse(Pet pet) {
+        return PetResponse.builder()
+                .id(pet.getId())
+                .nome(pet.getNome())
+                .idade(pet.getIdade())
+                .peso(pet.getPeso())
+                .usuarioId(pet.getDono().getId())
+                .build();
     }
 }
+
+
