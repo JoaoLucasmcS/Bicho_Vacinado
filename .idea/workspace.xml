@@ -4,19 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc8839f-3270-4bbc-9b9b-d0c47bf0975f" name="Changes" comment="feature: criadas as novas entidades do sistema e remapeadas as propriedades antigas de outras entidades">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" afterDir="false" />
+    <list default="true" id="3fc8839f-3270-4bbc-9b9b-d0c47bf0975f" name="Changes" comment="feature: criados os serviços para cada nova entidade do sistema e atualizados os serviços de Pet e PostoDeVacinacao">
+      <change afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PostoDeVacinacaoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/CartaoDeVacinaResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/CartaoDeVacinaResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/PetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/PetResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/PostoDeVacinacaoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/PostoDeVacinacaoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/VacinacaoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/VacinacaoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/CartaoDeVacinaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/CartaoDeVacinaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VaccinationStationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/UsuarioResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/UsuarioResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/VacinaResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/dto/response/VacinaResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/repository/CartaoDeVacinaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/repository/CartaoDeVacinaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/StationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/BichoVacinado/BichoVacinado/VaccinationStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/BichoVacinado/BichoVacinado/VaccinationStationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +55,13 @@
     &quot;accountId&quot;: &quot;2c8f19dd-1ada-46ef-ab5a-0e70fc0d95ee&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -56,36 +73,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.VaccinationStationTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.BichoVacinadoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dinoe/Documentos/.Dev/Faculdade/Bicho_Vacinado",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "D:\\JetBrains\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VaccinationStationTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BichoVacinadoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dinoe/Documentos/.Dev/Faculdade/Bicho_Vacinado&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\JetBrains\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Docker.backend: Compose Deployment">
     <configuration name="BichoVacinadoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -95,6 +114,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="backend/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.backend: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -120,7 +152,9 @@
       <workItem from="1744234096868" duration="26000" />
       <workItem from="1745980424520" duration="1462000" />
       <workItem from="1745981913892" duration="3750000" />
-      <workItem from="1748492221317" duration="2162000" />
+      <workItem from="1748492221317" duration="2345000" />
+      <workItem from="1748494590217" duration="953000" />
+      <workItem from="1748495584917" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="feature: criadas as novas entidades do sistema e remapeadas as propriedades antigas de outras entidades">
       <option name="closed" value="true" />
@@ -130,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748492354435</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feature: criados os serviços para cada nova entidade do sistema e atualizados os serviços de Pet e PostoDeVacinacao">
+      <option name="closed" value="true" />
+      <created>1748494512231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748494512231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +191,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature: criadas as novas entidades do sistema e remapeadas as propriedades antigas de outras entidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: criadas as novas entidades do sistema e remapeadas as propriedades antigas de outras entidades" />
+    <MESSAGE value="feature: criados os serviços para cada nova entidade do sistema e atualizados os serviços de Pet e PostoDeVacinacao" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: criados os serviços para cada nova entidade do sistema e atualizados os serviços de Pet e PostoDeVacinacao" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

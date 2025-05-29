@@ -13,18 +13,34 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CartaoDeVacinaService {
 
-    private final CartaoDeVacinaRepository cartaoRepository;
+    private final CartaoDeVacinaRepository cartaoDeVacinaRepository;
     private final PetRepository petRepository;
 
     public CartaoDeVacinaResponse cadastrar(CartaoDeVacinaRequest request) {
         Pet pet = petRepository.findById(request.getPetId())
                 .orElseThrow(() -> new RuntimeException("Pet não encontrado"));
 
+        CartaoDeVacina cartao = toEntity(request, pet);
+        return toResponse(cartaoDeVacinaRepository.save(cartao));
+    }
+
+    public CartaoDeVacinaResponse buscarPorId(Long id) {
+        CartaoDeVacina cartao = cartaoDeVacinaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Cartão de vacina não encontrado"));
+        return toResponse(cartao);
+    }
+
+    public CartaoDeVacinaResponse buscarPorPetId(Long petId) {
+        CartaoDeVacina cartao = cartaoDeVacinaRepository.findByPetId(petId)
+                .orElseThrow(() -> new RuntimeException("Cartão de vacina não encontrado para este pet"));
+        return toResponse(cartao);
+    }
+
+    private CartaoDeVacina toEntity(CartaoDeVacinaRequest request, Pet pet) {
         CartaoDeVacina cartao = new CartaoDeVacina();
         cartao.setNome(request.getNome());
         cartao.setPet(pet);
-
-        return toResponse(cartaoRepository.save(cartao));
+        return cartao;
     }
 
     private CartaoDeVacinaResponse toResponse(CartaoDeVacina cartao) {
@@ -35,4 +51,3 @@ public class CartaoDeVacinaService {
                 .build();
     }
 }
-

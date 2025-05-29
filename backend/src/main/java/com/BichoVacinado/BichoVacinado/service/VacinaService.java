@@ -7,6 +7,9 @@ import com.BichoVacinado.BichoVacinado.repository.VacinaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class VacinaService {
@@ -14,21 +17,32 @@ public class VacinaService {
     private final VacinaRepository vacinaRepository;
 
     public VacinaResponse cadastrar(VacinaRequest request) {
-        Vacina vacina = new Vacina();
-        vacina.setNome(request.getNome());
+        Vacina vacina = toEntity(request);
         return toResponse(vacinaRepository.save(vacina));
     }
 
-    public VacinaResponse atualizar(Long id, VacinaRequest request) {
+    public VacinaResponse buscarPorId(Long id) {
         Vacina vacina = vacinaRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Vacina não encontrada"));
+        return toResponse(vacina);
+    }
 
+    public List<VacinaResponse> listarTodos() {
+        return vacinaRepository.findAll().stream()
+                .map(this::toResponse)
+                .collect(Collectors.toList());
+    }
+
+    private Vacina toEntity(VacinaRequest request) {
+        Vacina vacina = new Vacina();
         vacina.setNome(request.getNome());
-        return toResponse(vacinaRepository.save(vacina));
+        return vacina;
     }
 
     private VacinaResponse toResponse(Vacina vacina) {
-        return new VacinaResponse(vacina.getId(), vacina.getNome());
+        return VacinaResponse.builder()
+                .id(vacina.getId())
+                .nome(vacina.getNome())
+                .build();
     }
 }
-
