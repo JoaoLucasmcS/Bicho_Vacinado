@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CartaoDeVacinaRepository extends JpaRepository<CartaoDeVacina, Long> {
-    // Você pode criar métodos customizados se precisar, ex:
     CartaoDeVacina findByPetId(Long petId);
 }

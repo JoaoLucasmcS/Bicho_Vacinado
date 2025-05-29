@@ -8,28 +8,22 @@ import lombok.Getter;
 import jakarta.validation.constraints.NotBlank;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "cartao_de_vacina")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartaoDeVacina {
+public class CartaoDeVacina extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false)
-    @NotBlank(message = "O nome é obrigatório")
     private String nome;
-    
+
     @OneToOne
-    @JoinColumn(name = "pet_id", unique = true)
+    @JoinColumn(name = "id_pet")
     private Pet pet;
 
-    @OneToMany(mappedBy = "cartaoDeVacina", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Vacina> vacinas;
+    @OneToMany(mappedBy = "cartaoDeVacina", cascade = CascadeType.ALL)
+    private List<Vacinacao> vacinacoes = new ArrayList<>();
 }

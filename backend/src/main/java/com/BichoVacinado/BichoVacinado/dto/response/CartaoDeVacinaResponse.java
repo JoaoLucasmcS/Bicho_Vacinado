@@ -4,16 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PetResponse {
+public class CartaoDeVacinaResponse {
+
     private Long id;
     private String nome;
-    private String especie;
-    private String raca;
-    private Integer idade;
-    private Double peso;
-    private String historicoSaude;
-    private Long usuarioId;
+    private Long petId;
+    private String nomePet;
+
+    private List<VacinacaoResponse> vacinacoes;
 }
+

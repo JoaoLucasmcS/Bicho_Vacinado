@@ -7,16 +7,11 @@ import lombok.Setter;
 import lombok.Getter;
 
 @Entity
-@Table(name = "vaccinationStation")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class VaccinationStation {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class PostoDeVacinacao extends BaseEntity {
 
     @Column(nullable = false)
     private String nome;

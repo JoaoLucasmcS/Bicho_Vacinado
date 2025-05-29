@@ -7,13 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PetResponse {
+public class UsuarioResponse {
+
     private Long id;
     private String nome;
-    private String especie;
-    private String raca;
-    private Integer idade;
-    private Double peso;
-    private String historicoSaude;
-    private Long usuarioId;
 }
+

@@ -6,7 +6,10 @@ import com.BichoVacinado.BichoVacinado.model.Vacina;
 import com.BichoVacinado.BichoVacinado.repository.CartaoDeVacinaRepository;
 import com.BichoVacinado.BichoVacinado.repository.PetRepository;
 
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -26,7 +29,7 @@ public class CartaoDeVacinaController {
     // Criar cartão de vacinação para um pet
    @PostMapping("/pet/{petId}")
 public ResponseEntity<?> criarCartao(@PathVariable Long petId, 
-                                     @Valid @RequestBody CartaoDeVacina cartao, 
+                                     @Valid @RequestBody CartaoDeVacina cartao,
                                      BindingResult result) {
     if (result.hasErrors()) {
         return ResponseEntity.badRequest().body(result.getAllErrors());
@@ -39,7 +42,7 @@ public ResponseEntity<?> criarCartao(@PathVariable Long petId,
 
     Pet pet = optionalPet.get();
 
-    if (cartaoRepo.findByPetId(pet.getId()).isPresent()) {
+    if (cartaoRepo.findByPetId(pet.getId()). !=) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body("Já existe um cartão para este pet.");
     }
 

@@ -1,7 +1,7 @@
 package com.BichoVacinado.BichoVacinado.controller;
 
-import com.BichoVacinado.BichoVacinado.dto.request.StationRequest;
-import com.BichoVacinado.BichoVacinado.dto.response.StationResponse;
+import com.BichoVacinado.BichoVacinado.dto.request.PostoDeVacinacaoRequest;
+import com.BichoVacinado.BichoVacinado.dto.response.PostoDeVacinacaoResponse;
 import com.BichoVacinado.BichoVacinado.service.StationService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,12 @@ public class VaccinationStationController {
     private StationService stationService;
 
     @PostMapping
-    public StationResponse cadastrar(@RequestBody @Valid StationRequest request){
+    public PostoDeVacinacaoResponse cadastrar(@RequestBody @Valid PostoDeVacinacaoRequest request){
         return stationService.cadastrar(request);
     }
 
     @PutMapping("/{id}")
-    public StationResponse atualizar(@PathVariable Long id, @RequestBody @Valid StationRequest request){
+    public PostoDeVacinacaoResponse atualizar(@PathVariable Long id, @RequestBody @Valid PostoDeVacinacaoRequest request){
         return stationService.atualizar(id, request);
     }
 }

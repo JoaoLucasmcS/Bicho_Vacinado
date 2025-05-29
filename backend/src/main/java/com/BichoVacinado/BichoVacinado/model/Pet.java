@@ -1,5 +1,6 @@
 package com.BichoVacinado.BichoVacinado.model;
 
+import com.BichoVacinado.BichoVacinado.model.utils.TipoPet;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -7,31 +8,28 @@ import lombok.Setter;
 import lombok.Getter;
 
 @Entity
-@Table(name = "pet")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pet {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Pet extends BaseEntity {
 
     @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false)
-    private String especie;
-
-    private String raca;
     private Integer idade;
-    private Double peso;
-    private String historicoSaude;
 
-    @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @Column(nullable = false)
+    private Double peso;
+
+    @ManyToOne
+    private Usuario dono;
+
+    @Enumerated(EnumType.STRING)
+    private TipoPet tipo;
+
+    @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL)
     private CartaoDeVacina cartaoDeVacina;
-    
-    @Column(name = "usuario_id", nullable = false)
-    private Long usuarioId;
 }
+

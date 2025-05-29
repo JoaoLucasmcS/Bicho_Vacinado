@@ -1,9 +1,9 @@
 package com.BichoVacinado.BichoVacinado.service;
 
-import com.BichoVacinado.BichoVacinado.dto.response.StationResponse;
-import com.BichoVacinado.BichoVacinado.dto.request.StationRequest;
-import com.BichoVacinado.BichoVacinado.model.VaccinationStation;
-import com.BichoVacinado.BichoVacinado.repository.StationRepository;
+import com.BichoVacinado.BichoVacinado.dto.response.PostoDeVacinacaoResponse;
+import com.BichoVacinado.BichoVacinado.dto.request.PostoDeVacinacaoRequest;
+import com.BichoVacinado.BichoVacinado.model.PostoDeVacinacao;
+import com.BichoVacinado.BichoVacinado.repository.PostoDeVacinacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,19 +11,19 @@ import org.springframework.stereotype.Service;
 public class StationService {
 
     @Autowired
-    private StationRepository stationRepository;
+    private PostoDeVacinacaoRepository postoDeVacinacaoRepository;
 
-    public StationResponse cadastrar(StationRequest stationRequest){
+    public PostoDeVacinacaoResponse cadastrar(PostoDeVacinacaoRequest postoDeVacinacaoRequest){
 
-        VaccinationStation station = new VaccinationStation();
+        PostoDeVacinacao station = new PostoDeVacinacao();
 
-        station.setNome(stationRequest.getNome());
-        station.setEndereco(stationRequest.getEndereco());
-        station.setTelefone(stationRequest.getTelefone());
+        station.setNome(postoDeVacinacaoRequest.getNome());
+        station.setEndereco(postoDeVacinacaoRequest.getEndereco());
+        station.setTelefone(postoDeVacinacaoRequest.getTelefone());
 
-        VaccinationStation salvo = stationRepository.save(station);
+        PostoDeVacinacao salvo = postoDeVacinacaoRepository.save(station);
 
-        StationResponse response = new StationResponse();
+        PostoDeVacinacaoResponse response = new PostoDeVacinacaoResponse();
         response.setId(salvo.getId());
         response.setNome(salvo.getNome());
         response.setEndereco(salvo.getEndereco());
@@ -33,17 +33,17 @@ public class StationService {
 
     }
 
-    public StationResponse atualizar(Long id, StationRequest request){
+    public PostoDeVacinacaoResponse atualizar(Long id, PostoDeVacinacaoRequest request){
 
-        VaccinationStation station = stationRepository.findById(id).orElseThrow(() -> new RuntimeException("Station não Encontrado"));
+        PostoDeVacinacao station = postoDeVacinacaoRepository.findById(id).orElseThrow(() -> new RuntimeException("Station não Encontrado"));
 
         station.setNome(request.getNome());
         station.setEndereco(request.getEndereco());
         station.setTelefone(request.getTelefone());
 
-        VaccinationStation atualizado = stationRepository.save(station);
+        PostoDeVacinacao atualizado = postoDeVacinacaoRepository.save(station);
 
-        StationResponse response = new StationResponse();
+        PostoDeVacinacaoResponse response = new PostoDeVacinacaoResponse();
 
         response.setId(atualizado.getId());
         response.setNome(atualizado.getNome());
