@@ -1,9 +1,10 @@
-/* package com.BichoVacinado.BichoVacinado;
+package com.BichoVacinado.BichoVacinado;
 
 import com.BichoVacinado.BichoVacinado.dto.request.PostoDeVacinacaoRequest;
 import com.BichoVacinado.BichoVacinado.dto.response.PostoDeVacinacaoResponse;
 import com.BichoVacinado.BichoVacinado.model.PostoDeVacinacao;
 import com.BichoVacinado.BichoVacinado.repository.PostoDeVacinacaoRepository;
+import com.BichoVacinado.BichoVacinado.service.PostoDeVacinacaoService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ class VaccinationStationTest {
 	private PostoDeVacinacaoRepository postoDeVacinacaoRepository;
 
 	@InjectMocks
-	private StationService stationService;
+	private PostoDeVacinacaoService stationService;
 
 	private PostoDeVacinacao station;
 	private PostoDeVacinacaoRequest request;
@@ -126,6 +127,7 @@ class VaccinationStationTest {
 		);
 	}
 
+	/*
 	@Test
 	void atualizarVaccinationStationExistente() {
 		Long id = 1L;
@@ -158,5 +160,5 @@ class VaccinationStationTest {
 		verify(postoDeVacinacaoRepository, times(1)).findById(id);
 		verify(postoDeVacinacaoRepository, never()).save(any(PostoDeVacinacao.class));
 	}
+	*/
 }
-*/
