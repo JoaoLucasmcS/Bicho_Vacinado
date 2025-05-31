@@ -127,7 +127,6 @@ class VaccinationStationTest {
 		);
 	}
 
-	/*
 	@Test
 	void atualizarVaccinationStationExistente() {
 		Long id = 1L;
@@ -160,5 +159,4 @@ class VaccinationStationTest {
 		verify(postoDeVacinacaoRepository, times(1)).findById(id);
 		verify(postoDeVacinacaoRepository, never()).save(any(PostoDeVacinacao.class));
 	}
-	*/
 }

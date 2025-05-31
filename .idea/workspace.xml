@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fc8839f-3270-4bbc-9b9b-d0c47bf0975f" name="Changes" comment="feature: criados os serviços para cada nova entidade do sistema e atualizados os serviços de Pet e PostoDeVacinacao">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/BichoVacinado/BichoVacinado/CartaoDeVacinaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/CartaoDeVacinaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/CartaoDeVacinaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PostoDeVacinacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PostoDeVacinacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,38 +53,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.backend: Compose Deployment.executor": "Run",
-    "JUnit.VaccinationStationTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.BichoVacinadoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/victo/Documentos/Programação_Estudos/PROJETOS/Bicho_Vacinado",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "ts.external.directory.path": "D:\\JetBrains\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CartaoDeVacinaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VaccinationStationTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BichoVacinadoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/victo/Documentos/Programação_Estudos/PROJETOS/Bicho_Vacinado&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\JetBrains\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.BichoVacinadoApplication">
+}</component>
+  <component name="RunManager">
     <configuration name="BichoVacinadoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
       <module name="BichoVacinado" />
