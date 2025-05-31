@@ -4,6 +4,7 @@ import com.BichoVacinado.BichoVacinado.dto.request.VacinacaoRequest;
 import com.BichoVacinado.BichoVacinado.dto.response.VacinacaoResponse;
 import com.BichoVacinado.BichoVacinado.model.*;
 import com.BichoVacinado.BichoVacinado.repository.*;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,34 @@ public class VacinacaoService {
         Vacinacao vacinacao = vacinacaoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Vacinação não encontrada"));
         return toResponse(vacinacao);
+    }
+    @Transactional
+    public VacinacaoResponse atualizar(Long id, VacinacaoRequest request) {
+        Vacinacao vacinacaoExistente = vacinacaoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Vacinação não encontrada"));
+
+        CartaoDeVacina cartao = cartaoDeVacinaRepository.findById(request.getCartaoDeVacinaId())
+                .orElseThrow(() -> new RuntimeException("Cartão de vacina não encontrado"));
+
+        Vacina vacina = vacinaRepository.findById(request.getVacinaId())
+                .orElseThrow(() -> new RuntimeException("Vacina não encontrada"));
+
+        PostoDeVacinacao posto = postoDeVacinacaoRepository.findById(request.getPostoDeVacinacaoId())
+                .orElseThrow(() -> new RuntimeException("Posto de vacinação não encontrado"));
+
+        vacinacaoExistente.setCartaoDeVacina(cartao);
+        vacinacaoExistente.setVacina(vacina);
+        vacinacaoExistente.setPostoDeVacinacao(posto);
+
+        Vacinacao vacinacaoAtualizada = vacinacaoRepository.save(vacinacaoExistente);
+        return toResponse(vacinacaoAtualizada);
+    }
+
+    @Transactional
+    public void deletar(Long id) {
+        Vacinacao vacinacao = vacinacaoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Vacinação não encontrada"));
+        vacinacaoRepository.delete(vacinacao);
     }
 
     private Vacinacao toEntity(VacinacaoRequest request, CartaoDeVacina cartao, Vacina vacina, PostoDeVacinacao posto) {

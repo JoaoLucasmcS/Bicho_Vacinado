@@ -1,8 +1,11 @@
 package com.BichoVacinado.BichoVacinado.service;
 
 import com.BichoVacinado.BichoVacinado.dto.request.UsuarioRequest;
+import com.BichoVacinado.BichoVacinado.dto.request.VacinaRequest;
 import com.BichoVacinado.BichoVacinado.dto.response.UsuarioResponse;
+import com.BichoVacinado.BichoVacinado.dto.response.VacinaResponse;
 import com.BichoVacinado.BichoVacinado.model.Usuario;
+import com.BichoVacinado.BichoVacinado.model.Vacina;
 import com.BichoVacinado.BichoVacinado.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -25,6 +28,22 @@ public class UsuarioService {
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
         return toResponse(usuario);
+    }
+
+    public UsuarioResponse atualizar(Long id, UsuarioRequest request) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        usuario.setNome(request.getNome());
+
+        return toResponse(usuarioRepository.save(usuario));
+    }
+
+    public void deletar(Long id) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        usuarioRepository.delete(usuario);
     }
 
     public List<UsuarioResponse> listarTodos() {

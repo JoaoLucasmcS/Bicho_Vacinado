@@ -1,7 +1,10 @@
 package com.BichoVacinado.BichoVacinado.service;
 
+import com.BichoVacinado.BichoVacinado.dto.request.PetRequest;
 import com.BichoVacinado.BichoVacinado.dto.request.VacinaRequest;
+import com.BichoVacinado.BichoVacinado.dto.response.PetResponse;
 import com.BichoVacinado.BichoVacinado.dto.response.VacinaResponse;
+import com.BichoVacinado.BichoVacinado.model.Pet;
 import com.BichoVacinado.BichoVacinado.model.Vacina;
 import com.BichoVacinado.BichoVacinado.repository.VacinaRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +22,22 @@ public class VacinaService {
     public VacinaResponse cadastrar(VacinaRequest request) {
         Vacina vacina = toEntity(request);
         return toResponse(vacinaRepository.save(vacina));
+    }
+
+    public VacinaResponse atualizar(Long id, VacinaRequest request) {
+        Vacina vacina = vacinaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Vacina não encontrada"));
+
+        vacina.setNome(request.getNome());
+
+        return toResponse(vacinaRepository.save(vacina));
+    }
+
+    public void deletar(Long id) {
+        Vacina vacina = vacinaRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Vacina não encontrada"));
+
+        vacinaRepository.delete(vacina);
     }
 
     public VacinaResponse buscarPorId(Long id) {

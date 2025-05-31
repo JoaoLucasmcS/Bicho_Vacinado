@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fc8839f-3270-4bbc-9b9b-d0c47bf0975f" name="Changes" comment="feature: criados os serviços para cada nova entidade do sistema e atualizados os serviços de Pet e PostoDeVacinacao">
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/BichoVacinado/BichoVacinado/VaccinationStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/BichoVacinado/BichoVacinado/VaccinationStationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/CartaoDeVacinaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/CartaoDeVacinaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PostoDeVacinacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/PostoDeVacinacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/controller/VacinacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/CartaoDeVacinaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/PostoDeVacinacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/BichoVacinado/BichoVacinado/service/VacinacaoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +93,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.backend: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.BichoVacinadoApplication">
     <configuration name="BichoVacinadoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="BichoVacinado" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.BichoVacinado.BichoVacinado.BichoVacinadoApplication" />
       <method v="2">
@@ -101,6 +110,10 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.backend: Compose Deployment" />
+      <item itemvalue="Spring Boot.BichoVacinadoApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.backend: Compose Deployment" />
