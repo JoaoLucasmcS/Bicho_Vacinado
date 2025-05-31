@@ -1,7 +1,9 @@
 package com.BichoVacinado.BichoVacinado.controller;
 
 import com.BichoVacinado.BichoVacinado.dto.request.PostoDeVacinacaoRequest;
+import com.BichoVacinado.BichoVacinado.dto.request.UsuarioRequest;
 import com.BichoVacinado.BichoVacinado.dto.response.PostoDeVacinacaoResponse;
+import com.BichoVacinado.BichoVacinado.dto.response.UsuarioResponse;
 import com.BichoVacinado.BichoVacinado.service.PostoDeVacinacaoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -27,6 +29,12 @@ public class PostoDeVacinacaoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(postoDeVacinacaoService.cadastrar(request));
     }
 
+    @PutMapping("/{id}")
+    @Operation(summary = "Atualizar um posto de vacinação existente")
+    public ResponseEntity<PostoDeVacinacaoResponse> atualizar(@PathVariable Long id, @RequestBody @Valid PostoDeVacinacaoRequest request) {
+        return ResponseEntity.ok(postoDeVacinacaoService.atualizar(id, request));
+    }
+
     @GetMapping("/{id}")
     @Operation(summary = "Buscar posto de vacinação por ID")
     public ResponseEntity<PostoDeVacinacaoResponse> buscarPorId(@PathVariable Long id) {
@@ -37,5 +45,12 @@ public class PostoDeVacinacaoController {
     @Operation(summary = "Listar todos os postos de vacinação")
     public ResponseEntity<List<PostoDeVacinacaoResponse>> listarTodos() {
         return ResponseEntity.ok(postoDeVacinacaoService.listarTodos());
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Deletar posto de vacinação por ID")
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
+        postoDeVacinacaoService.deletar(id);
+        return ResponseEntity.noContent().build();
     }
 }

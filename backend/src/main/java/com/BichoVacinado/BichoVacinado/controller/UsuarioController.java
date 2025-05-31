@@ -1,7 +1,9 @@
 package com.BichoVacinado.BichoVacinado.controller;
 
 import com.BichoVacinado.BichoVacinado.dto.request.UsuarioRequest;
+import com.BichoVacinado.BichoVacinado.dto.request.VacinacaoRequest;
 import com.BichoVacinado.BichoVacinado.dto.response.UsuarioResponse;
+import com.BichoVacinado.BichoVacinado.dto.response.VacinacaoResponse;
 import com.BichoVacinado.BichoVacinado.service.UsuarioService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -27,6 +29,12 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.cadastrar(request));
     }
 
+    @PutMapping("/{id}")
+    @Operation(summary = "Atualizar um usuário existente")
+    public ResponseEntity<UsuarioResponse> atualizar(@PathVariable Long id, @RequestBody @Valid UsuarioRequest request) {
+        return ResponseEntity.ok(usuarioService.atualizar(id, request));
+    }
+
     @GetMapping("/{id}")
     @Operation(summary = "Buscar usuário por ID")
     public ResponseEntity<UsuarioResponse> buscarPorId(@PathVariable Long id) {
@@ -37,5 +45,12 @@ public class UsuarioController {
     @Operation(summary = "Listar todos os usuários")
     public ResponseEntity<List<UsuarioResponse>> listarTodos() {
         return ResponseEntity.ok(usuarioService.listarTodos());
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Deletar usuário por ID")
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
+        usuarioService.deletar(id);
+        return ResponseEntity.noContent().build();
     }
 }
